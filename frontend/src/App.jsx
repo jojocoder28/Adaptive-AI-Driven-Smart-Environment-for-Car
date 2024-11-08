@@ -7,6 +7,7 @@ import NavigationPanel from './components/NavigationPanel';
 import VoiceAssistantPanel from './components/VoiceAssistantPanel';
 import HealthMonitoringPanel from './components/HealthMonitoringPanel';
 import CommunityEngagementPanel from './components/CommunityEngagementPanel';
+import TabletUi from './components/TabletUi';
 
 function App() {
   const [activePanel, setActivePanel] = useState('navigation');
@@ -30,18 +31,18 @@ function App() {
       <div className="w-1/2 bg-gray-100 p-4 overflow-y-auto">
         <h1 className="text-2xl font-bold mb-4">Interactive Car Dashboard</h1>
         {/* Pass the setActivePanel function as a prop to change the active panel */}
-        <NavigationPanel setActivePanel={setActivePanel} />
+        <TabletUi setActivePanel={setActivePanel} />
         {renderActivePanel()}
       </div>
 
       {/* Right Side - 3D Car Rendering */}
       <div className="w-1/2 bg-gray-800">
-        <Canvas camera={{ position: [0, 200, 500], fov: 100 }}>
+        {/* <Canvas camera={{ position: [0, 200, 500], fov: 100 }}>
           <ambientLight intensity={3} />
           <pointLight position={[0, 100, 100]} intensity={1.5} />
           <CarModel />
           <OrbitControls enablePan={false} />
-        </Canvas>
+        </Canvas> */}
       </div>
     </div>
   );

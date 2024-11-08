@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaRoute, FaMicrophone, FaHeartbeat, FaUsers } from 'react-icons/fa';
 
-function NavigationPanel({ setActivePanel }) {
+function TabletUi({ setActivePanel }) {
   return (
     <div className="p-4 bg-white rounded shadow mb-4">
       <h2 className="text-xl font-semibold mb-4">Tablet Dashboard</h2>
@@ -39,4 +39,4 @@ function NavigationPanel({ setActivePanel }) {
   );
 }
 
-export default NavigationPanel;
+export default TabletUi;
