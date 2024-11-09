@@ -45,3 +45,27 @@ async def generate_navigation(start_point: str = Form(...), destination: str = F
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Internal Server Error: {str(e)}")
 
+@app.post("/voice-command/")
+async def voice_command(input_text: str = Form(...)):
+    """
+    Endpoint to receive a voice command as text, process it using Gemini, and return the response.
+    """
+    try:
+        if not input_text:
+            raise ValueError("Input text cannot be empty")
+        
+        # Generate response from the Gemini model
+        response = model.generate_content("Your name is Chagol. You are a smart AI assistant of the Car, your responsibiliy is to help the car driver and also the pessengers to make feel comfortable in the car. Now give answers to the questions : " + input_text + "  Only give the perfect response to the user, act as an AI voice assistant.")
+
+        if response is None or not response.text:
+            raise ValueError("No response generated from the model")
+
+        return {
+            "input_text": input_text,
+            "response": response.text
+        }
+
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Internal Server Error: {str(e)}")
