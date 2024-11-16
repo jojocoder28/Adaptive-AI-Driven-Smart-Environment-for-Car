@@ -11,7 +11,7 @@ function ACMoodControlButton({ adjustACTemperatureAndMood }) {
         <FaTemperatureHigh size={40} className="text-teal-500 mr-2" />
         <FaGrin size={40} className="text-yellow-500" />
       </div>
-      <span className="text-sm">Adjust AC & Detect Mood</span>
+      <span className="text-sm">Adjust AC</span>
     </div>
   );
 }
