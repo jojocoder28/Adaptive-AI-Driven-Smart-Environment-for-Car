@@ -6,7 +6,7 @@ function VoiceAssistantPanel() {
   const [isLoading, setIsLoading] = useState(false);
   const [transcript, setTranscript] = useState('');
   const [response, setResponse] = useState('');
-  const assistantName = 'Goat';  // The assistant's name
+  const assistantName = 'Nova';  // The assistant's name
 
   // This effect will run once when the component is mounted to start listening for the assistant's name
   useEffect(() => {
