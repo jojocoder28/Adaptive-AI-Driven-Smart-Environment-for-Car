@@ -30,56 +30,47 @@ cd Adaptive-AI-Driven-Smart-Environment-for-Car
 Navigate to the Frontend directory:
 
 ```bash
-Copy code
 cd Frontend
 ```
 Install dependencies:
 
 ```bash
-Copy code
 npm install
 ```
 Start the development server:
 
 ```bash
-Copy code
 npm run dev
 ```
 The frontend application will be available at:
 
 ```arduino
-Copy code
 http://localhost:1573
 ```
 3. Setting up the Backend
 Navigate to the Backend directory:
 
 ```bash
-Copy code
 cd Backend
 ```
 Install the required Python packages:
 
 ```bash
-Copy code
 pip install -r requirements.txt
 ```
 Start the FastAPI backend server:
 
 ```bash
-Copy code
 uvicorn app:app --host 127.0.0.1 --port 8000
 ```
 The backend API will be accessible at:
 
 ```arduino
-Copy code
 http://127.0.0.1:8000
 ```
 
 Directory Structure
 ```bash
-Copy code
 your-repo-name/
 ├── Frontend/      # React/Vue/Other frontend framework code
 ├── Backend/       # FastAPI backend code
